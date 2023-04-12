@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang=en>
-  <head>
-    <meta charset=UTF-8 />
-  <meta http-equiv=X-UA-Compatible content=IE=edge>
-    <meta name=viewport content=width=device-width, initial-scale=1.0 />
-    <title>LoginCheck</title>
-      <script src=/js/app.js></script>
-  </head>
-  <body>
-    <p>Hello World!</p>
-  </body>
-</html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoginCheck</title>
+</head>
+
+<body>
+  <main id="main">
+    <form>
+      <label for="email_input">email</label>
+      <input id="email_input" type="text" name="email" placeholder="email" autocomplete="useremail">
+      <label for="pass_input">Password</label>
+      <input id="pass_input" type="password" name="password" placeholder="password" autocomplete="current-password">
+      <button type="submit" class="add">login</button>
+    </form>
+    <a href="/pages/logout.html">Link</a>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

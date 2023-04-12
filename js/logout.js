@@ -1,5 +1,6 @@
 // created a variable that will store  a string value from cookie using the get Method 
 let loginjson = Cookies.get( `login` );
+console.log(loginjson)
 //selecting a tag from checkout html using querySelector
 let product_container = document.querySelector( `#main-section` );
 let get_main = document.querySelector( `#main` );
@@ -13,9 +14,7 @@ if(  loginjson === undefined ) {
 
 } else
 {
-    let login_info = JSON.parse( loginjson );
-    console.log(login_info)
     product_container.insertAdjacentHTML(`afterbegin`, `<p style=" color: #e3333b;
-    align-self: strat; font-size: 1.6rem;"> login email ${login_info[`email`]}</p> <p style=" color: #e3333b;
-    align-self: strat; font-size: 1.6rem;"> login email ${login_info[`password`]}</p>`)
+    align-self: strat; font-size: 1.6rem;"> login email ${loginjson[`email`]}</p> <p style=" color: #e3333b;
+    align-self: strat; font-size: 1.6rem;"> login email ${loginjson[`password`]}</p>`)
 }

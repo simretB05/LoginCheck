@@ -4,7 +4,7 @@ let get_main = document.querySelector( `#main` )
 
 function success( response){
         
-    let response_json = JSON.stringify(response)
+    let response_json = response.data.token
     // get_main.insertAdjacentHTML( `afterbegin`, `<h3>Your Post request is recived</h3>` )
     // console.log( response )
     Cookies.set( `login`,response_json )
@@ -14,8 +14,9 @@ function success( response){
 function failure(error) {
     get_main.insertAdjacentHTML( `afterbegin`, `<h3>try again</h3>` )
 }
-function logIn( details, e ){
-    e.preventDefault();
+function logIn( details){
+   
+    console.log(`clicked`)
 //selected all the input elements using querySelector and got
 //  there value using the value attribute for inputs
 let email_input = document.getElementById(`email_input`)
